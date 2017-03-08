@@ -5,13 +5,13 @@
 // Base Colors
 $white: #fff;
 $black: #000;
-$red: #c3251d;
+$red: #b00000;
 $gray--lightest: #eee;
 $gray--lighter: #ddd;
 $gray--light: #ccc;
 $gray--medium-light: #999;
 $gray--medium: #777;
-$gray: #333;
+$gray: #334366;
 
 // Site Colors
 
@@ -23,7 +23,7 @@ $link--hover-color: $gray;
 $body--background-color: $gray--light;
 
 // Elements
-$hr--border-color: $gray--light;
+$hr--border-color: $red;
 
 // Form Elements
 $input--background-color: $white;
@@ -44,7 +44,7 @@ $table-body--border-color: $gray--light;
 $table-cell--border-color: $gray--light;
 
 // Header
-$site-title--link-color: $gray;
+$site-title--link-color: $red;
 $site-header--background-color: $white;
 
 // Navigation

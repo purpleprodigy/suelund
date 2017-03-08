@@ -2,13 +2,13 @@
 /**
  * Description
  *
- * @package     PurpleProdigy\Developers
+ * @package     SueLund
  * @since       1.0.0
  * @author      Purple Prodigy
- * @link        http://www.purpleprodigy.com
+ * @link        https://www.purpleprodigy.com
  * @licence     GNU General Public License 2.0+
  */
-namespace PurpleProdigy\Developers;
+namespace SueLund;
 
 return array(
 

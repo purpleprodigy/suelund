@@ -4,7 +4,8 @@
 
 .site-title {
   @include rem(font-size, $site-title--font-size );
-  font-weight: 700;
+  font-family: $site-title--font-family;
+  font-weight: 400;
   line-height: 1.2;
   margin-bottom: 0;
 

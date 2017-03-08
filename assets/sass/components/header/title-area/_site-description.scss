@@ -4,7 +4,9 @@
 
 .site-description {
   @include rem(font-size, $site-description--font-size);
-  font-weight: 400;
+  font-family: $site-description--font;
+  font-weight: 700;
+  letter-spacing: 0.3em;
   line-height: 1.5;
   margin-bottom: 0;
 
