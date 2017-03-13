@@ -1,3 +1,65 @@
 //
 // Front Page Base
 //======================================
+/* # Interior Pro Front Page
+Loaded on the front page */
+
+/* Front Page
+---------------------------------------------------------------------------------------------------- */
+
+.front-page .site-inner {
+  max-width: 100%;
+  padding: 0;
+}
+
+.front-page .content {
+  margin-bottom: 0;
+}
+
+/* Front Page 1
+--------------------------------------------- */
+
+.front-page-1 {
+  padding-bottom: 0;
+}
+
+.front-page-1 .widget_text {
+  font-size: 48px;
+  font-size: 4.8rem;
+  line-height: 1.2;
+}
+
+/* Front Page 2
+--------------------------------------------- */
+
+.front-page-2 {
+  background-color: #fff;
+}
+
+.front-page-2 .flexible-widgets.widget-full .enews-widget,
+.front-page-2 .flexible-widgets.widget-full .widget_text {
+  margin: 0 auto 40px;
+  max-width: 800px;
+  text-align: center;
+}
+
+/* # Media Queries
+---------------------------------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 1024px) {
+
+  .front-page-1 .widget_text {
+    font-size: 36px;
+    font-size: 3.6rem;
+  }
+
+}
+
+@media only screen and (max-width: 880px) {
+
+  .front-page-1 .widget_text {
+    font-size: 30px;
+    font-size: 3rem;
+  }
+
+}

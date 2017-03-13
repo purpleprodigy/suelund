@@ -26,18 +26,19 @@ function load_nonadmin_files() {
 		'functions/enqueue-assets.php',
 		'functions/favicon.php',
 //		'functions/markup.php',
-//		'structure/archive.php',
+		'structure/archive.php',
 		'structure/comments.php',
 //		'structure/footer.php',
 //		'structure/header.php',
 		'structure/menu.php',
 		'structure/post.php',
 //		'structure/sidebar.php',
+		'widgets/widget-areas.php',
 	);
 	load_specified_files( $filenames );
 }
 
-add_action( 'admin_init' , __NAMESPACE__ . '\load_admin_files' );
+add_action( 'admin_init', __NAMESPACE__ . '\load_admin_files' );
 /**
  * Loads admin files.
  *
@@ -65,8 +66,9 @@ function load_admin_files() {
  */
 function load_specified_files( array $filenames, $folder_root = '' ) {
 	$folder_root = $folder_root ?: CHILD_THEME_DIR . '/lib/';
-	foreach( $filenames as $filename ) {
+	foreach ( $filenames as $filename ) {
 		include( $folder_root . $filename );
 	}
 }
+
 load_nonadmin_files();
