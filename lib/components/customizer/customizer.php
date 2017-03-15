@@ -25,21 +25,6 @@ function register_with_customizer() {
 
 	global $wp_customize;
 
-	$wp_customize->add_section(
-		'suelund-settings', array(
-		'description' => __( 'Upload an image for the hero area.<br /><br />The image size should be <strong>1800 pixels wide and 800 pixels tall</strong>.', CHILD_TEXT_DOMAIN ),
-		'title'       => __( 'Hero Image', CHILD_TEXT_DOMAIN ),
-		'priority'    => 75,
-	) );
-
-	$wp_customize->add_control(
-		new WP_Customize_Image_Control(
-			array(
-				'label'    => sprintf( __( 'Hero Image:', CHILD_TEXT_DOMAIN ) ),
-				'section'  => 'suelund-settings',
-				'priority' => 2,
-			) ) );
-
 	$wp_customize->add_setting(
 		$prefix . '_link_color',
 		array(

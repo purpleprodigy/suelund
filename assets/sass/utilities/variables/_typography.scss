@@ -56,12 +56,9 @@ $input--font-size: 18px;
 $button--font-size: 16px;
 
 // Widgets
-$widget-title--font-size: 18px;
+$widget-title--font-size: $h2--font-size;
+$widget-text--font-size: $h5--font-size;
 $featured-content__entry-title--font-size: 20px;
-$sidebar--font-size: 16px;
-
-// Plugins
-$enews--font-size: 16px;
 
 // Comments
 $comments--font-size: 16px;

@@ -1,11 +1,6 @@
 //
 // Front Page Base
 //======================================
-/* # Interior Pro Front Page
-Loaded on the front page */
-
-/* Front Page
----------------------------------------------------------------------------------------------------- */
 
 .front-page .site-inner {
   max-width: 100%;
@@ -20,46 +15,141 @@ Loaded on the front page */
 --------------------------------------------- */
 
 .front-page-1 {
+  background-image: url(http://suelund.dev/wp-content/uploads/2017/03/suelund-bg.jpg);
   padding-bottom: 0;
+  background-position: top;
+  background-size: cover;
+  min-height: 425px;
 }
 
-.front-page-1 .widget_text {
-  font-size: 48px;
-  font-size: 4.8rem;
-  line-height: 1.2;
+.front-page-1 .widget {
+  margin: 0 auto 40px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.front-page .textwidget {
+  background: $white;
+  margin-top: 60px;
+  padding: 40px;
+}
+
+.front-page-1 p {
+  font-size: $widget-text--font-size;
+  color: $red;
 }
 
 /* Front Page 2
 --------------------------------------------- */
 
 .front-page-2 {
+  padding: 60px 10px 20px;
   background-color: #fff;
 }
 
-.front-page-2 .flexible-widgets.widget-full .enews-widget,
-.front-page-2 .flexible-widgets.widget-full .widget_text {
-  margin: 0 auto 40px;
-  max-width: 800px;
+.front-page-2 .featured-content {
+  float: left;
+  width: 25%;
+  padding: 0 20px;
   text-align: center;
 }
 
-/* # Media Queries
----------------------------------------------------------------------------------------------------- */
-
-@media only screen and (max-width: 1024px) {
-
-  .front-page-1 .widget_text {
-    font-size: 36px;
-    font-size: 3.6rem;
-  }
-
+.featured-content article.has-post-thumbnail {
+  position: relative;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
 }
 
-@media only screen and (max-width: 880px) {
+.featured-content article.has-post-thumbnail > a {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+}
 
-  .front-page-1 .widget_text {
-    font-size: 30px;
-    font-size: 3rem;
+.featured-content article.has-post-thumbnail > a img {
+  display: block;
+  margin: 0;
+  opacity: 1;
+  width: 100%;
+  -webkit-transition: opacity .2s cubic-bezier(0, 1, .75, 1), transform 2.5s cubic-bezier(0, 1, .75, 1);
+  -moz-transition: opacity .2s cubic-bezier(0, 1, .75, 1), transform 2.5s cubic-bezier(0, 1, .75, 1);
+  -ms-transition: opacity .2s cubic-bezier(0, 1, .75, 1), transform 2.5s cubic-bezier(0, 1, .75, 1);
+  -o-transition: opacity .2s cubic-bezier(0, 1, .75, 1), transform 2.5s cubic-bezier(0, 1, .75, 1);
+  transition: opacity .2s cubic-bezier(0, 1, .75, 1), transform 2.5s cubic-bezier(0, 1, .75, 1);
+}
+
+.featured-content article.has-post-thumbnail:hover > a img {
+  transform: scale(1.1);
+}
+
+.featured-content article.has-post-thumbnail .entry-title {
+  width: 100%;
+}
+
+.featured-content article.has-post-thumbnail .entry-title a {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 800px) {
+
+  .featured-content.featuredpost {
+    width: calc(100% + 2rem);
+    margin-left: -1rem;
+    margin-right: -1rem;
   }
 
+  .featured-content.featuredpost article.has-post-thumbnail {
+    width: calc(50% - 2rem);
+    margin: 1rem;
+    float: left;
+  }
+
+  .featured-content article.has-post-thumbnail .entry-title {
+    margin: 1rem 0;
+  }
+
+  .featured-content article.has-post-thumbnail {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+
+  .featured-content article.has-post-thumbnail:hover > a img {
+    opacity: .15;
+  }
+
+  .featured-content article.has-post-thumbnail .entry-header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    -webkit-transition: opacity .2s cubic-bezier(0, 1, .75, 1), bottom .2s cubic-bezier(0, 1, .75, 1);
+    -moz-transition: opacity .2s cubic-bezier(0, 1, .75, 1), bottom .2s cubic-bezier(0, 1, .75, 1);
+    -ms-transition: opacity .2s cubic-bezier(0, 1, .75, 1), bottom .2s cubic-bezier(0, 1, .75, 1);
+    -o-transition: opacity .2s cubic-bezier(0, 1, .75, 1), bottom .2s cubic-bezier(0, 1, .75, 1);
+    transition: opacity .2s cubic-bezier(0, 1, .75, 1), bottom .2s cubic-bezier(0, 1, .75, 1);
+    opacity: 0;
+    bottom: -15%;
+    text-align: left;
+  }
+
+  .featured-content article.has-post-thumbnail:hover .entry-header {
+    opacity: 1;
+    bottom: 0;
+  }
+
+  .featured-content article.has-post-thumbnail .entry-title {
+    margin: 0;
+  }
+
+  .featured-content article.has-post-thumbnail .entry-header a {
+    padding: 0 15% 4rem;
+    margin: 0;
+    width: 100%;
+    display: block;
+  }
 }

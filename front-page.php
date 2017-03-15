@@ -34,10 +34,10 @@ function render_front_page() {
 		add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 
 		//* Remove After Header
-		if ( is_active_sidebar( 'front-page-1' ) ) {
-			remove_action( 'genesis_after_header', 'suelund_open_after_header', 5 );
-			remove_action( 'genesis_after_header', 'suelund_close_after_header', 15 );
-		}
+//		if ( is_active_sidebar( 'front-page-1' ) ) {
+//			remove_action( 'genesis_after_header', 'suelund_open_after_header', 5 );
+//			remove_action( 'genesis_after_header', 'suelund_close_after_header', 15 );
+//		}
 
 		//* Remove breadcrumbs
 		remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
@@ -58,13 +58,13 @@ function suelund_front_page_widgets() {
 	echo '<h2 class="screen-reader-text">' . __( 'Main Content', CHILD_TEXT_DOMAIN ) . '</h2>';
 
 	genesis_widget_area( 'front-page-1', array(
-		'before' => '<div id="front-page-1" class="front-page-1 after-header"><div class="flexible-widgets widget-area' . ( 'front-page-1' ) . '"><div class="wrap">',
-		'after'  => '</div></div></div>',
+		'before' => '<div id="front-page-1" class="front-page-1"><div class="wrap">',
+		'after'  => '</div></div>',
 	) );
 
 	genesis_widget_area( 'front-page-2', array(
-		'before' => '<div id="front-page-2" class="front-page-2"><div class="flexible-widgets widget-area' . ( 'front-page-2' ) . '"><div class="wrap">',
-		'after'  => '</div></div></div>',
+		'before' => '<div id="front-page-2" class="front-page-2"><div class="wrap">',
+		'after'  => '</div></div>',
 	) );
 }
 
