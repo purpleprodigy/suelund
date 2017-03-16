@@ -94,31 +94,17 @@
   text-decoration: none;
 }
 
-@include media( $breakpoint__screen-size--large ) {
+@include media( $breakpoint__screen-size--medium ) {
 
   .front-page-2 .featured-content {
     float: none;
-    width: calc(100% + 2rem);
-    //margin-left: -1rem;
-    //margin-right: -1rem;
+    width: 100%;
+    padding: 0 30px;
   }
-
-  //.front-page-2 .featured-content article.has-post-thumbnail {
-  //  width: calc(50% - 2rem);
-  //  margin: 1rem;
-  //  float: left;
-  //}
-  //
-  //.front-page-2 .featured-content article.has-post-thumbnail .entry-title {
-  //  margin: 1rem 0;
-  //}
-
-  //.front-page-2 .featured-content article.has-post-thumbnail {
-  //  margin-bottom: 0;
-  //}
 }
 
-@include media( $breakpoint__screen-size--small ) {
+//@include media( $breakpoint__screen-size--small ) {
+  @media only screen and (min-width: 860px) {
 
   .front-page-2 .featured-content article.has-post-thumbnail:hover > a img {
     opacity: .15;

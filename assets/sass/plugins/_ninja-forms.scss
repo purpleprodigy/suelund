@@ -1,3 +1,13 @@
 //
 // Ninja Forms
 //======================================
+
+.nf-form-content {
+  float: left;
+}
+
+@include media( $breakpoint__screen-size--small ) {
+  .page-id-8 img {
+    display: none;
+  }
+}
