@@ -7,7 +7,7 @@
   padding: 10px 0;
   width: $title-area--width;
 
-    @include media( $breakpoint__screen-size--medium ) {
+    @include media( $breakpoint__screen-size--large ) {
     width: 100%;
     text-align: center;
   }

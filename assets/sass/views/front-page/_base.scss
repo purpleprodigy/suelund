@@ -24,17 +24,18 @@
 
 .front-page-1 .widget {
   margin: 0 auto 40px;
-  max-width: 600px;
+  max-width: 450px;
   text-align: center;
 }
 
 .front-page .textwidget {
   background: $white;
-  margin-top: 60px;
-  padding: 40px;
+  margin-top: 100px;
+  padding: 55px;
 }
 
 .front-page-1 p {
+  font-family: $widget-text--font-family;
   font-size: $widget-text--font-size;
   color: $red;
 }
@@ -93,36 +94,37 @@
   text-decoration: none;
 }
 
-@media only screen and (max-width: 800px) {
+@include media( $breakpoint__screen-size--large ) {
 
-  .featured-content.featuredpost {
+  .front-page-2 .featured-content {
+    float: none;
     width: calc(100% + 2rem);
-    margin-left: -1rem;
-    margin-right: -1rem;
+    //margin-left: -1rem;
+    //margin-right: -1rem;
   }
 
-  .featured-content.featuredpost article.has-post-thumbnail {
-    width: calc(50% - 2rem);
-    margin: 1rem;
-    float: left;
-  }
+  //.front-page-2 .featured-content article.has-post-thumbnail {
+  //  width: calc(50% - 2rem);
+  //  margin: 1rem;
+  //  float: left;
+  //}
+  //
+  //.front-page-2 .featured-content article.has-post-thumbnail .entry-title {
+  //  margin: 1rem 0;
+  //}
 
-  .featured-content article.has-post-thumbnail .entry-title {
-    margin: 1rem 0;
-  }
-
-  .featured-content article.has-post-thumbnail {
-    margin-bottom: 0;
-  }
+  //.front-page-2 .featured-content article.has-post-thumbnail {
+  //  margin-bottom: 0;
+  //}
 }
 
-@media only screen and (min-width: 800px) {
+@include media( $breakpoint__screen-size--small ) {
 
-  .featured-content article.has-post-thumbnail:hover > a img {
+  .front-page-2 .featured-content article.has-post-thumbnail:hover > a img {
     opacity: .15;
   }
 
-  .featured-content article.has-post-thumbnail .entry-header {
+  .front-page-2 .featured-content article.has-post-thumbnail .entry-header {
     position: absolute;
     left: 0;
     right: 0;
@@ -134,19 +136,19 @@
     transition: opacity .2s cubic-bezier(0, 1, .75, 1), bottom .2s cubic-bezier(0, 1, .75, 1);
     opacity: 0;
     bottom: -15%;
-    text-align: left;
+    text-align: center;
   }
 
-  .featured-content article.has-post-thumbnail:hover .entry-header {
+  .front-page-2 .featured-content article.has-post-thumbnail:hover .entry-header {
     opacity: 1;
     bottom: 0;
   }
 
-  .featured-content article.has-post-thumbnail .entry-title {
+  .front-page-2 .featured-content article.has-post-thumbnail .entry-title {
     margin: 0;
   }
 
-  .featured-content article.has-post-thumbnail .entry-header a {
+  .front-page-2 .featured-content article.has-post-thumbnail .entry-header a {
     padding: 0 15% 4rem;
     margin: 0;
     width: 100%;

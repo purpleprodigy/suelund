@@ -2,7 +2,7 @@
 // .js enabled styles
 //======================================
 
-@include media( $breakpoint__screen-size--medium ) {
+@include media( $breakpoint__screen-size--large ) {
   .js {
     .genesis-nav-menu {
       .sub-menu, .sub-menu a {

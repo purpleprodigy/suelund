@@ -10,7 +10,7 @@
   @include media($breakpoint__screen-size--large) {
     width: $header-right--width--large-screen;
   }
-  @include media($breakpoint__screen-size--medium) {
+  @include media($breakpoint__screen-size--large) {
     width: 100%;
     text-align: center;
   }

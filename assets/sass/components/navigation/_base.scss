@@ -9,7 +9,7 @@
   line-height: 1;
   width: 100%;
 
-  @include media($breakpoint__screen-size--medium) {
+  @include media($breakpoint__screen-size--large) {
     text-align: center;
 
     li,
