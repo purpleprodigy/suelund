@@ -6,3 +6,7 @@
   opacity: .5;
   transform: scale(1.1);
 }
+
+.ngg-navigation a.next:hover, .ngg-navigation a.page-numbers:hover, .ngg-navigation a.prev:hover, .ngg-navigation span.next:hover, .ngg-navigation span.page-numbers:hover, .ngg-navigation span.prev:hover {
+  background-color: $blue !important;
+}

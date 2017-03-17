@@ -11,14 +11,16 @@ $gray--lighter: #ddd;
 $gray--light: #ccc;
 $gray--medium-light: #999;
 $gray--medium: #777;
-$gray: #334366;
+$gray: #333;
+$blue: #287f82;
+$fb-blue: #3b5998;
 
 // Site Colors
 
 $base-color: $gray;
 
 $link-color: $red;
-$link--hover-color: $gray;
+$link--hover-color: $blue;
 
 $body--background-color: $red;
 
@@ -71,7 +73,7 @@ $nav-toggle-color: $gray;
 
 $archive-pagination--background-color: $white;
 $archive-pagination-color: $gray;
-$archive-pagination-hoverBackgroundColor: $red;
+$archive-pagination-hoverBackgroundColor: $blue;
 $archive-pagination--hover-color: $white;
 
 // Entry

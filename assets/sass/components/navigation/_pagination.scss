@@ -26,7 +26,6 @@
 .archive-pagination {
   li {
     display: inline;
-
       @include media( $breakpoint__screen-size--small ) {
       a {
         margin-bottom: 4px;
