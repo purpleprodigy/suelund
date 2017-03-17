@@ -20,24 +20,21 @@
   background-position: top;
   background-size: cover;
   min-height: 425px;
-}
-
-.front-page-1 .widget {
-  margin: 0 auto 40px;
-  max-width: 450px;
-  text-align: center;
-}
-
-.front-page .textwidget {
-  background: $white;
-  margin-top: 100px;
-  padding: 55px;
-}
-
-.front-page-1 p {
-  font-family: $widget-text--font-family;
-  font-size: $widget-text--font-size;
-  color: $red;
+  .widget {
+    margin: 0 auto 40px;
+    max-width: 450px;
+    text-align: center;
+  }
+  .textwidget {
+    background: $white;
+    margin-top: 100px;
+    padding: 55px;
+  }
+  p {
+    font-family: $widget-text--font-family;
+    @include rem(font-size, $widget-text--font-size);
+    color: $red;
+  }
 }
 
 /* Front Page 2
@@ -45,56 +42,49 @@
 
 .front-page-2 {
   padding: 60px 10px 20px;
-  background-color: #fff;
+  background-color: $white;
+  .featured-content {
+    float: left;
+    width: 25%;
+    padding: 0 20px;
+    text-align: center;
+  }
+  article.has-post-thumbnail {
+    position: relative;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+  }
+  > a {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    img {
+      display: block;
+      margin: 0;
+      opacity: 1;
+      width: 100%;
+      -webkit-transition: opacity .2s cubic-bezier(0, 1, .75, 1), transform 2.5s cubic-bezier(0, 1, .75, 1);
+      -moz-transition: opacity .2s cubic-bezier(0, 1, .75, 1), transform 2.5s cubic-bezier(0, 1, .75, 1);
+      -ms-transition: opacity .2s cubic-bezier(0, 1, .75, 1), transform 2.5s cubic-bezier(0, 1, .75, 1);
+      -o-transition: opacity .2s cubic-bezier(0, 1, .75, 1), transform 2.5s cubic-bezier(0, 1, .75, 1);
+      transition: opacity .2s cubic-bezier(0, 1, .75, 1), transform 2.5s cubic-bezier(0, 1, .75, 1);
+    }
+  }
+  :hover > a img {
+    transform: scale(1.1);
+  }
+  .entry-title {
+    width: 100%;
+    a {
+      text-decoration: none;
+    }
+  }
 }
 
-.front-page-2 .featured-content {
-  float: left;
-  width: 25%;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.featured-content article.has-post-thumbnail {
-  position: relative;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
-}
-
-.featured-content article.has-post-thumbnail > a {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  display: block;
-  margin: 0;
-}
-
-.featured-content article.has-post-thumbnail > a img {
-  display: block;
-  margin: 0;
-  opacity: 1;
-  width: 100%;
-  -webkit-transition: opacity .2s cubic-bezier(0, 1, .75, 1), transform 2.5s cubic-bezier(0, 1, .75, 1);
-  -moz-transition: opacity .2s cubic-bezier(0, 1, .75, 1), transform 2.5s cubic-bezier(0, 1, .75, 1);
-  -ms-transition: opacity .2s cubic-bezier(0, 1, .75, 1), transform 2.5s cubic-bezier(0, 1, .75, 1);
-  -o-transition: opacity .2s cubic-bezier(0, 1, .75, 1), transform 2.5s cubic-bezier(0, 1, .75, 1);
-  transition: opacity .2s cubic-bezier(0, 1, .75, 1), transform 2.5s cubic-bezier(0, 1, .75, 1);
-}
-
-.featured-content article.has-post-thumbnail:hover > a img {
-  transform: scale(1.1);
-}
-
-.featured-content article.has-post-thumbnail .entry-title {
-  width: 100%;
-}
-
-.featured-content article.has-post-thumbnail .entry-title a {
-  text-decoration: none;
-}
-
-@include media( $breakpoint__screen-size--medium ) {
+@include media($breakpoint__screen-size--medium) {
 
   .front-page-2 .featured-content {
     float: none;
@@ -104,40 +94,38 @@
 }
 
 //@include media( $breakpoint__screen-size--small ) {
-  @media only screen and (min-width: 860px) {
+@media only screen and (min-width: 860px) {
 
-  .front-page-2 .featured-content article.has-post-thumbnail:hover > a img {
-    opacity: .15;
-  }
-
-  .front-page-2 .featured-content article.has-post-thumbnail .entry-header {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 3;
-    -webkit-transition: opacity .2s cubic-bezier(0, 1, .75, 1), bottom .2s cubic-bezier(0, 1, .75, 1);
-    -moz-transition: opacity .2s cubic-bezier(0, 1, .75, 1), bottom .2s cubic-bezier(0, 1, .75, 1);
-    -ms-transition: opacity .2s cubic-bezier(0, 1, .75, 1), bottom .2s cubic-bezier(0, 1, .75, 1);
-    -o-transition: opacity .2s cubic-bezier(0, 1, .75, 1), bottom .2s cubic-bezier(0, 1, .75, 1);
-    transition: opacity .2s cubic-bezier(0, 1, .75, 1), bottom .2s cubic-bezier(0, 1, .75, 1);
-    opacity: 0;
-    bottom: -15%;
-    text-align: center;
-  }
-
-  .front-page-2 .featured-content article.has-post-thumbnail:hover .entry-header {
-    opacity: 1;
-    bottom: 0;
-  }
-
-  .front-page-2 .featured-content article.has-post-thumbnail .entry-title {
-    margin: 0;
-  }
-
-  .front-page-2 .featured-content article.has-post-thumbnail .entry-header a {
-    padding: 0 15% 4rem;
-    margin: 0;
-    width: 100%;
-    display: block;
+  .front-page-2 .featured-content article.has-post-thumbnail {
+    .entry-title {
+      margin: 0;
+    }
+    .entry-header {
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 3;
+      -webkit-transition: opacity .2s cubic-bezier(0, 1, .75, 1), bottom .2s cubic-bezier(0, 1, .75, 1);
+      -moz-transition: opacity .2s cubic-bezier(0, 1, .75, 1), bottom .2s cubic-bezier(0, 1, .75, 1);
+      -ms-transition: opacity .2s cubic-bezier(0, 1, .75, 1), bottom .2s cubic-bezier(0, 1, .75, 1);
+      -o-transition: opacity .2s cubic-bezier(0, 1, .75, 1), bottom .2s cubic-bezier(0, 1, .75, 1);
+      transition: opacity .2s cubic-bezier(0, 1, .75, 1), bottom .2s cubic-bezier(0, 1, .75, 1);
+      opacity: 0;
+      bottom: -15%;
+      text-align: center;
+      a {
+        padding: 0 15% 4rem;
+        margin: 0;
+        width: 100%;
+        display: block;
+      }
+    }
+    &:hover > a img {
+      opacity: .15;
+    }
+    &:hover .entry-header {
+      opacity: 1;
+      bottom: 0;
+    }
   }
 }
