@@ -19,8 +19,9 @@ namespace SueLund;
  */
 function customize_header() {
 	unregister_sidebar( 'header-right' );
+}
 
-//	//* Add social nav widget to primary navigation
+//	//* Add social widget to primary navigation
 	add_filter( 'genesis_nav_items', __NAMESPACE__ . '\add_social_icons_menu', 10, 2 );
 	add_filter( 'wp_nav_menu_items', __NAMESPACE__ . '\add_social_icons_menu', 10, 2 );
 
@@ -32,5 +33,4 @@ function customize_header() {
 		genesis_widget_area('social-menu');
 		$social = ob_get_clean();
 		return $menu . $social;
-	}
 }

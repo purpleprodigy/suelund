@@ -4,7 +4,6 @@
 
 .entry-footer {
   .entry-meta {
-    border-top: 1px solid $entry-footer__meta--border-color;
     padding-top: 24px;
     @include rem(font-size, $entry-footer__entry-meta--font-size );
     margin-bottom: 0;
@@ -15,4 +14,3 @@
 .entry-tags {
   display: block;
 }
-

@@ -20,21 +20,15 @@ namespace SueLund;
 function load_nonadmin_files() {
 	$filenames = array(
 		'setup.php',
-
 		'components/customizer/css-handler.php',
 		'components/customizer/customizer.php',
 		'components/customizer/helpers.php',
-//		'functions/formatting.php',
 		'functions/enqueue-assets.php',
 		'functions/favicon.php',
-//		'functions/markup.php',
 		'structure/archive.php',
-		'structure/comments.php',
 		'structure/footer.php',
 		'structure/header.php',
 		'structure/menu.php',
-		'structure/post.php',
-//		'structure/sidebar.php',
 		'widgets/widget-areas.php',
 	);
 	load_specified_files( $filenames );

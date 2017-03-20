@@ -21,13 +21,13 @@ add_action( 'genesis_setup', __NAMESPACE__ . '\setup', 15 );
 function setup() {
 	unregister_sidebar( 'sidebar' );
 	unregister_sidebar( 'sidebar-alt' );
+	unregister_sidebar( 'header-right' );
 	add_filter( 'widget_text', 'do_shortcode' );
-
 	register_widget_areas();
 }
 
 /**
- * Register the widget areas enabled by default in Utility.
+ * Register the widget areas.
  *
  * @since  1.0.0
  *

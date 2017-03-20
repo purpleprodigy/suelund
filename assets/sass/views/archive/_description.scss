@@ -6,7 +6,7 @@
   background-color: $archive-description--background-color;
   @include rem(font-size, $archive-description--font-size );
   margin-bottom: 40px;
-  padding: 60px;
+  padding: 20px;
 
   @include media( $breakpoint__screen-size--small ) {
     padding: 30px;

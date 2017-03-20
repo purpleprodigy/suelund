@@ -22,9 +22,10 @@ function setup_child_theme() {
 	load_child_theme_textdomain( CHILD_TEXT_DOMAIN, apply_filters( 'child_theme_textdomain', CHILD_THEME_DIR . '/languages', CHILD_TEXT_DOMAIN ) );
 	customize_header();
 	unregister_layouts();
-	unregister_genesis_callbacks();
+	reposition_navigation_menu();
 	add_theme_supports();
 	adds_new_image_sizes();
+	remove_theme_support( 'genesis-breadcrumbs' );
 }
 /**
  * Unregister the Genesis Layouts.
@@ -49,17 +50,6 @@ function unregister_layouts() {
 }
 
 /**
- * Unregister Genesis callbacks.  We do this here because the child theme loads before Genesis.
- *
- * @since 1.0.0
- *
- * @return void
- */
-function unregister_genesis_callbacks() {
-	unregister_menu_callbacks();
-}
-
-/**
  * Add theme supports to the site.
  *
  * @since 1.0.0
@@ -78,16 +68,7 @@ function add_theme_supports () {
 			'skip-links'
 		),
 		'genesis-responsive-viewport' => null,
-//		'custom-header' => array(
-//			'width'           => 600,
-//			'height'          => 160,
-//			'header-selector' => '.site-title a',
-//			'header-text'     => false,
-//			'flex-height'     => true,
-//		),
 		'custom-background' => null,
-		//'genesis-after-entry-widget-area' => null,
-		//'genesis-footer-widgets' => 3,
 		'genesis-menus' => array(
 			'primary'   => __( 'Before Header Menu', CHILD_TEXT_DOMAIN )
 		)
@@ -147,7 +128,6 @@ function update_theme_setting_defaults() {
 	if ( function_exists( 'genesis_update_settings' ) ) {
 		genesis_update_settings( $config );
 	}
-
 	update_option( 'post_per_page', $config['blog_cat_num'] );
 }
 
@@ -165,6 +145,5 @@ function get_theme_settings_defaults() {
 		'content_archive_limit'     => 0,
 		'content_archive_thumbnail' => 0,
 		'posts_nav'                 => 'numeric',
-		'site_layout'               => 'content-sidebar',
 	);
 }
