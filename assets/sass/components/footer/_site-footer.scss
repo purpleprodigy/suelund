@@ -4,12 +4,20 @@
 
 .site-footer {
   background-color: $site-footer--background-color;
-  border-top: 1px solid $site-footer--border-color;
+  color: $site-footer--color;
   @include rem(font-size, $site-footer--font-size );
   line-height: 1;
-  padding: 60px 0;
+  padding: 24px;
   text-align: center;
   p {
     margin-bottom: 0;
+  }
+  a {
+    color: $site-footer--color;
+    text-decoration: none;
+    &:hover {
+      color: $site-footer--hover-color;
+      text-decoration: underline;
+    }
   }
 }

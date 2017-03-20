@@ -6,7 +6,7 @@
 $white: #fff;
 $black: #000;
 $red: #b00000;
-$gray--lightest: #eee;
+$gray--lightest: #efefef;
 $gray--lighter: #ddd;
 $gray--light: #ccc;
 $gray--medium-light: #999;
@@ -22,7 +22,7 @@ $base-color: $gray;
 $link-color: $red;
 $link--hover-color: $blue;
 
-$body--background-color: $red;
+$body--background-color: $white;
 
 // Elements
 $hr--border-color: $red;
@@ -57,7 +57,7 @@ $submenu--border-color: $gray--light;
 $submenu--link-background-color: $white;
 
 $primary-nav--background-color: $white;
-$primary-nav--border-color: $gray--light;
+$primary-nav--border-color: $red;
 $primary-nav--link-color: $nav--link-color;
 
 $secondary-nav--background-color: $white;
@@ -84,26 +84,18 @@ $entry--background-color: $white;
 
 $entry-footer__meta--border-color: $gray--light;
 
-$entry-content__code--background-color: $gray;
-$entry-content__code--border-color: $gray--light;
+$entry-content__background-color: $gray--lightest;
+$entry-content__border-color: $white;
 
 // Widgets
 $widget-title--link-color: $gray;
 $widget--background-color: $white;
 
-// Plugins
-$enews--color: $white;
-$enews--background-color: $gray;
-$enews__input--border-color: $gray;
-$enews__submit-button--background-color: $red;
-$enews__submit-button-color: $white;
-$enews__submit-button--hover-background-color: $white;
-$enews__submit-button--hover-color: $gray;
 
 // Footer
-$site-footer--background-color: $white;
-$site-footer--border-color: $gray--light;
-$footer-widgets--background-color: $white;
+$site-footer--color: $white;
+$site-footer--background-color: $red;
+$site-footer--hover-color: $gray--lightest;
 
 // Comments
 $comments--background-color: $white;

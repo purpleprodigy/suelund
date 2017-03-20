@@ -20,6 +20,7 @@ add_action( 'genesis_setup', __NAMESPACE__ . '\setup_child_theme', 15 );
  */
 function setup_child_theme() {
 	load_child_theme_textdomain( CHILD_TEXT_DOMAIN, apply_filters( 'child_theme_textdomain', CHILD_THEME_DIR . '/languages', CHILD_TEXT_DOMAIN ) );
+	customize_header();
 	unregister_layouts();
 	unregister_genesis_callbacks();
 	add_theme_supports();
@@ -87,10 +88,9 @@ function add_theme_supports () {
 		'custom-background' => null,
 		//'genesis-after-entry-widget-area' => null,
 		//'genesis-footer-widgets' => 3,
-//		'genesis-menus' => array(
-//			'primary'   => __( 'After Header Menu', CHILD_TEXT_DOMAIN ),
-//			'secondary' => __( 'Footer Menu', CHILD_TEXT_DOMAIN )
-//		)
+		'genesis-menus' => array(
+			'primary'   => __( 'Before Header Menu', CHILD_TEXT_DOMAIN )
+		)
 	);
 	foreach ( $config as $feature => $args ) {
 		add_theme_support( $feature, $args);
