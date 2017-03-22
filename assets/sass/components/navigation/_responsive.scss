@@ -46,7 +46,6 @@
     &:before,
     &.activated:before {
       margin-right: 10px;
-      text-rendering: auto;
       @include transform(translate(0, 0));
     }
   }
