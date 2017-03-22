@@ -21,6 +21,7 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_assets' );
 function enqueue_assets() {
 
 	wp_enqueue_style( CHILD_TEXT_DOMAIN . '-fonts', '//fonts.googleapis.com/css?family=Archivo+Narrow:400,700|Julius+Sans+One|Source+Sans+Pro:400,600,700', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'dashicons' );
 	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', array(), '4.6.3');
 	wp_enqueue_script( CHILD_TEXT_DOMAIN . '-responsive-menu', CHILD_URL . '/assets/js/responsive-menu.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 	$localized_script_args = array(
