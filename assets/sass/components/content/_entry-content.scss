@@ -23,4 +23,7 @@
   ul ul {
     margin-bottom: 0;
   }
+  @include media( $breakpoint__screen-size--small ) {
+    margin: 10px;
+  }
 }
