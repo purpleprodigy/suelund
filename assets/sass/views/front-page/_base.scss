@@ -16,15 +16,8 @@
 --------------------------------------------- */
 
 .front-page-1 {
-  background-image: url(http://purpleprodigy.com/sue/wp-content/uploads/2017/03/suelund-bg.jpg);
-  @include media($breakpoint__screen-size--medium) {
-    background-image: url(http://purpleprodigy.com/sue/wp-content/uploads/2017/03/suelund-bg-sm.jpg);
-    min-height: 150px;
-  }
+  background-image: url(http://purpleprodigy.com/sue/wp-content/uploads/2017/03/suelund-background.jpg);
   padding-bottom: 0;
-  background-position: top;
-  background-size: cover;
-  min-height: 425px;
   .widget {
     margin: 0 auto 40px;
     max-width: 450px;
@@ -34,11 +27,20 @@
     background: $white;
     margin-top: 100px;
     padding: 55px;
+    opacity: 0.8;
+    z-index: 8;
+    @include media($breakpoint__screen-size--small) {
+      margin-top: 50px;
+      padding: 25px;
+    }
   }
   p {
     font-family: $widget-text--font-family;
     @include rem(font-size, $widget-text--font-size);
     color: $red;
+    @include media($breakpoint__screen-size--small) {
+      @include rem(font-size, $widget-text--mobile-font-size);
+    }
   }
 }
 
