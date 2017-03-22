@@ -9,7 +9,7 @@
   border-bottom: 1px dotted $gray--light;
 
     @include media( $breakpoint__screen-size--small ) {
-    padding: 30px;
+    padding: 10px;
     margin-bottom: 5%;
   }
 }
