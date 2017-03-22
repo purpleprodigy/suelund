@@ -14,7 +14,6 @@
   }
 }
 
-.sub-menu-toggle,
 .menu-toggle {
   display: none;
   visibility: hidden;
@@ -32,29 +31,6 @@
 }
 
 @include media($breakpoint__screen-size--large) {
-  .sub-menu-toggle {
-    float: right;
-    padding: 10px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 100;
-
-    &:hover,
-    &:focus {
-      border-width: 0;
-    }
-    &:before {
-      display: inline-block;
-      text-rendering: auto;
-      @include transform(translate(0, 0));
-    }
-
-    &.activated:before {
-      content: "\f142";
-    }
-  }
-
   .menu-toggle {
     border-top: 1px solid $gray--lightest;
     line-height: 20px;
