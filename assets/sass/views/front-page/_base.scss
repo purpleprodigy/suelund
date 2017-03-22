@@ -17,6 +17,10 @@
 
 .front-page-1 {
   background-image: url(http://purpleprodigy.com/sue/wp-content/uploads/2017/03/suelund-bg.jpg);
+  @include media($breakpoint__screen-size--medium) {
+    background-image: url(http://purpleprodigy.com/sue/wp-content/uploads/2017/03/suelund-bg-sm.jpg);
+    min-height: 150px;
+  }
   padding-bottom: 0;
   background-position: top;
   background-size: cover;
