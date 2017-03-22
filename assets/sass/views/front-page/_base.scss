@@ -21,6 +21,9 @@
   background-position: top;
   background-size: cover;
   min-height: 425px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   .widget {
     margin: 0 auto 40px;
     max-width: 450px;
