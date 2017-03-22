@@ -5,21 +5,9 @@
 @include media( $breakpoint__screen-size--large ) {
   .js {
     .genesis-nav-menu {
-      .sub-menu, .sub-menu a {
-        width: 100%;
-      }
-
-      .menu-item:hover {
+       .menu-item:hover {
         position: relative;
       }
-      .menu-item > a:focus {
-        ul.sub-menu,
-        ul.sub-menu .sub-menu {
-          left: 0;
-          margin-left: 0;
-        }
-      }
-
       > .menu-item-has-children > a:after {
         content: none;
       }
