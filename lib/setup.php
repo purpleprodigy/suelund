@@ -48,7 +48,20 @@ function unregister_layouts() {
 	// temporary fix for Genesis bug 06.22.2016
 	genesis_set_default_layout( 'full-width-content' );
 }
-
+add_filter( 'genesis_post_info', __NAMESPACE__ . '\modify_post_info' );
+/**
+ * Modify post info to remove date.
+ *
+ * @since 1.0.0
+ *
+ * @param $post_info
+ *
+ * @return string
+ */
+function modify_post_info($post_info) {
+	$post_info = 'Posted by [post_author_posts_link] [post_comments] [post_edit]';
+	return $post_info;
+}
 /**
  * Add theme supports to the site.
  *
